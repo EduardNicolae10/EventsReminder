@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">EventsReminder</string>
+    <string name="register_now">Register now</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="login">Login</string>
+    <string name="events_reminder_title">Events Reminder</string>
+</resources>
