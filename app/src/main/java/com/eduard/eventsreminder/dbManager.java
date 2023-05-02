@@ -66,10 +66,11 @@ public class dbManager extends SQLiteOpenHelper {
      * */
     public int login(UserModel userModel){
         int id=-1;
-        String [] str = new String[1];
+        String [] str = new String[2];
         str[0]= userModel.getUsername();
+        str[1]= userModel.getPassword();
         SQLiteDatabase db = getReadableDatabase();
-        String queryLogin = "SELECT " + ID + " FROM " + TABLE_USERS + " WHERE " + USERNAME + " = ? ";
+        String queryLogin = "SELECT " + ID + " FROM " + TABLE_USERS + " WHERE " + USERNAME + " = ? " + " AND " + PASSWORD + " = ? ";
         Cursor cursor = db.rawQuery(queryLogin,str);
         if (cursor.moveToFirst()) {
             id=1;
@@ -110,7 +111,7 @@ public class dbManager extends SQLiteOpenHelper {
         if(result==-1){
             return "Failed";
         }else {
-            return "Succesfully inserted";
+            return "Event succesfully inserted";
         }
     }
 
